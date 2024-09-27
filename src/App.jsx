@@ -1,17 +1,16 @@
-import Header from "./components/Header/Header";
-import Menu from "./components/Menu/Menu";
-import Footer from "./components/Footer/Footer";
 import './App.css';
+import ListItems from './components/ListItems/ListItems';
+const tasks = [
+    { name: "Learn React", priority: "High" },
+    { name: "Do Groceries", priority: "Low" },
+    { name: "Exercise", priority: "High" },
+    { name: "Read a Book", priority: "Medium" },
+]
 function App() {
     return (
         <div>
-            <Header />
-            <Menu />
-            <main className="content">
-                <h2>Main Content</h2>
-                <p>Main content goes here.</p>
-            </main>
-            <Footer />
+            <h1>Task List:</h1>
+            <ListItems items={tasks} />
         </div>
     )
 }
